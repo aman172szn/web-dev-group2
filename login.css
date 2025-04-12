@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    font-family: "Galdeano", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.737), rgba(0, 0, 0, 0.737)),url(./media/background.jpeg);
+}
+.outerContainer{
+    /* height: 100vh; */
+    /* width: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+/*     background: #f5f6fa; */   
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px;
+    background-color: transparent;
+    /* margin-top: 20px; */
+    margin-bottom: 40px;
+    width: 100%;
+}
+.left{
+    font-size: 24px;
+    padding-left: 5%;
+    color: #d93f3f;
+    font-weight: 900;
+}
+.left h1 span{
+    color: white;
+}
+.right{
+    /* padding-left: auto; */
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-right: 5%;
+} 
+.navsocial{
+    color: white;
+}
+.navsocial i{
+    padding-left: 10px;
+    padding-right: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.navsocial i:hover {
+    transform: scale(1.2);
+}
+.navregButton button{
+    height: 34px;
+    width: 80px;
+    border-radius: 30px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.navregButton button:hover{
+    background-color: #d93f3f;
+    color: white;
+    transform: scale(1.2);
+}
+.container{
+    width: 900px;
+    height: 530px;
+    /* border: 1px solid; */
+}
+#headings{
+    margin-top: -30px;
+    text-align: center;
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.loginbox{
+    height: 75%;
+    /* border: 1px solid; */
+    margin-top: 30px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.login{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* border: 1px solid; */
+    height: 100%;
+}
+.formHeader{
+    /* margin-top: 10px; */
+    padding-top: 50px;
+    padding-left: 25px;
+    font-weight: bold;
+    font-size: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.social{
+    margin-left: auto;
+    margin-right: 25px;
+}
+.social i{
+    padding-left: 10px;
+    padding-right: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.social i:hover {
+    transform: scale(1.2);
+}
+.formFields{
+    /* border: 1px solid; */
+    padding-left: 21px;
+    padding-right: 21px;
+    padding-top: 25px;
+    padding-right: 21x;
+}
+.formFields1{
+    /* border: 1px solid; */
+    padding-left: 21px;
+    padding-right: 21px;
+    padding-top: 15px;
+    /* padding-right: 21x; */
+}
+.formFields label{
+    font-weight: bold;
+    padding-left: 12px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.formFields1 label{
+    font-weight: bold;
+    padding-left: 12px;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.formFields input{
+    width: 100%;
+    height: 42px;
+    border-radius: 30px;
+    border: none;
+    background: #e4e4e3;
+    padding-left: 18px;
+    box-sizing: border-box;
+}
+.formFields1 input{
+    width: 100%;
+    height: 42px;
+    border-radius: 30px;
+    border: none;
+    background: #e4e4e3;
+    padding-left: 18px;
+    box-sizing: border-box;
+}
+.formFields button{
+    width: 100%;
+    height: 42px;
+    border-radius: 30px;
+    /* margin-left: 3px; */
+    background-color: #d93f3f;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.formFields1 button{
+    width: 100%;
+    height: 42px;
+    border-radius: 30px;
+    /* margin-left: 3px; */
+    background-color: #d93f3f;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.formFields button:hover{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* background-color: #d93f3fc2; */
+    color: black;
+}
+.formFields1 button:hover{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* background-color: #d93f3fc2; */
+    color: black;
+}
+#extras{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#extras label{
+    padding-left: 10px;
+    font-weight: 900;
+}
+#extras p{
+    padding-right: 10px;
+    margin-left: auto;
+    font-weight: 900;
+}
+.form{
+    transition: all 0.3s ease;
+}
+.registration{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center ;
+    border: none;
+    gap: 10px;
+    background-color: #d93f3f;
+    color: white;
+}
+.registration h3{
+    font-size: 35px;
+}
+.registration button{
+    height: 42px;
+    width: 80px;
+    border-radius: 30px;
+    background-color: #d93f3f;
+    color: white;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.registration button:hover{
+    background-color: white;
+    color: #d93f3f;
+    transform: scale(1.2);
+}
