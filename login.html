@@ -38,7 +38,7 @@
             </div> -->
             <div class="loginbox">
                 <div class="login">
-                    <div class="form" id="signIn">
+                    <form class="form" id="signIn" method="POST" action="login.php">
                         <div class="formHeader">
                             <h3>Sign In</h3>
                             <div class="social">
@@ -55,14 +55,14 @@
                             <input type="password" id="password" name="password" placeholder="Password">
                         </div>
                         <div class="formFields">
-                            <button type="submit">Sign In</button>
+                            <button type="submit" name="login">Sign In</button>
                         </div>
                         <div id="extras">
                             <label><input type="checkbox"> Remember Me</label>
                             <p>Forgot Password</p>
                         </div>
-                    </div>
-                    <div class="form" id="signUp" style="display: none;">
+                    </form>
+                    <form class="form" id="signUp" method="POST" action="register.php" style="display: none;">
                         <div class="formHeader">
                             <h3>Sign Up</h3>
                             <div class="social">
@@ -83,9 +83,9 @@
                             <input type="password" id="password" name="password" placeholder="Password">
                         </div>
                         <div class="formFields1">
-                            <button type="submit">Sign Up</button>
+                            <button type="submit" name="signup">Sign Up</button>
                         </div>
-                    </div>
+                    </form>
                     <div class="registration" id="signUpMessage">
                         <h3>Welcome to ezBooks</h3>
                         <p>Don't have an account?</p>
