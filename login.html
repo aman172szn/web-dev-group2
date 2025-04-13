@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ezBooks-Login</title>
+    <!-- icon -->
+    <link rel="icon" type="image/svg+xml" href="./media/ICON.svg" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Galdeano&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inconsolata:wdth,wght@82,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./login.css" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="left">
+        <h1><span>ez</span>Books</h1>
+      </div>
+      <div class="right">
+        <div class="navsocial">
+          <i class="fa-brands fa-facebook fa-2xl"></i>
+          <i class="fa-brands fa-instagram fa-2xl"></i>
+        </div>
+        <div class="navregButton">
+          <button type="button" class="toggleSignUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+    <div class="outerContainer">
+      <div class="container">
+        <div class="loginbox">
+          <div class="login">
+            <form class="form" id="signIn" method="POST" action="login.php">
+              <div class="formHeader">
+                <h3>Sign In</h3>
+                <div class="social">
+                  <i class="fa-brands fa-facebook fa-lg"></i>
+                  <i class="fa-brands fa-instagram fa-lg"></i>
+                </div>
+              </div>
+              <?php if(isset($_SESSION['error'])): ?>
+              <div class="error-message">
+                <?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
+              </div>
+              <?php endif; ?>
+              <div class="formFields">
+                <label for="login_username">USERNAME</label><br />
+                <input
+                  type="text"
+                  id="login_username"
+                  name="username"
+                  placeholder="Username"
+                  required
+                />
+              </div>
+              <div class="formFields">
+                <label for="login_password">PASSWORD</label><br />
+                <input
+                  type="password"
+                  id="login_password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              <div class="formFields">
+                <button type="submit" name="login">Sign In</button>
+              </div>
+              <div id="extras">
+                <label><input type="checkbox" /> Remember Me</label>
+                <p>Forgot Password</p>
+              </div>
+            </form>
+            <form
+              class="form"
+              id="signUp"
+              method="POST"
+              action="register.php"
+              style="display: none"
+            >
+              <div class="formHeader">
+                <h3>Sign Up</h3>
+                <div class="social">
+                  <i class="fa-brands fa-facebook fa-lg"></i>
+                  <i class="fa-brands fa-instagram fa-lg"></i>
+                </div>
+              </div>
+              <div class="formFields1">
+                <label for="signup_username">USERNAME</label><br />
+                <input
+                  type="text"
+                  id="signup_username"
+                  name="username"
+                  placeholder="Username"
+                  required
+                />
+              </div>
+              <div class="formFields1">
+                <label for="signup_phone">PHONE NUMBER</label><br />
+                <input
+                  type="tel"
+                  id="signup_phone"
+                  name="phno"
+                  placeholder="Phone Number"
+                  required
+                />
+              </div>
+              <div class="formFields1">
+                <label for="signup_password">PASSWORD</label><br />
+                <input
+                  type="password"
+                  id="signup_password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              <div class="formFields1">
+                <button type="submit" name="signup">Sign Up</button>
+              </div>
+            </form>
+            <div class="registration" id="signUpMessage">
+              <h3>Welcome to ezBooks</h3>
+              <p>Don't have an account?</p>
+              <div class="regButton">
+                <button type="button" class="toggleSignUp">Sign Up</button>
+              </div>
+            </div>
+            <div class="registration" id="signInMessage" style="display: none">
+              <h3>Welcome to ezBooks</h3>
+              <p>Already have an account?</p>
+              <div class="regButton">
+                <button type="button" class="toggleSignIn">Sign In</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const signInForm = document.getElementById("signIn");
+      const signUpForm = document.getElementById("signUp");
+      const signInMessage = document.getElementById("signInMessage");
+      const signUpMessage = document.getElementById("signUpMessage");
+
+      const signUpBtns = document.querySelectorAll(".toggleSignUp");
+      const signInBtns = document.querySelectorAll(".toggleSignIn");
+
+      signUpBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          signInForm.style.display = "none";
+          signUpMessage.style.display = "none";
+          signUpForm.style.display = "block";
+          signInMessage.style.display = "flex";
+        });
+      });
+
+      signInBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          signUpForm.style.display = "none";
+          signInMessage.style.display = "none";
+          signInForm.style.display = "block";
+          signUpMessage.style.display = "flex";
+        });
+      });
+    </script>
+  </body>
+</html>
