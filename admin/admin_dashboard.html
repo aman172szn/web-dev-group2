@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel - Bookstore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Galdeano&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inconsolata:wdth,wght@82,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <div class="navbar">
+      <h2><span class="ez">ez</span><span class="books">Books</span></h2>
+      <div class="nav-links">
+        <a href="admin_dashboard.html">Home</a>
+        <a href="admin_managebook.html">Manage Books</a>
+        <a href="admin_manageuser.html">Manage Users</a>
+      </div>
+    </div>
+    
+
+  <div class="main">
+    <h1 id="greeting">Welcome, Admin 👋</h1>
+    <div class="cards">
+      <div class="card">
+        <p>Total Books</p>
+        <h3 id="bookCount">0</h3>
+      </div>
+      <div class="card">
+        <p>Total Users</p>
+        <h3 id="userCount">0</h3>
+      </div>
+      <div class="card">
+        <p>Sales</p>
+        <h3 id="sales">₹0</h3>
+      </div>
+    </div>
+  </div>
+  <!--navigation to each page-->
+
+  <script>
+    // Dummy data
+    
+
+    document.getElementById('bookCount').textContent = data.books;
+    document.getElementById('userCount').textContent = data.users;
+    document.getElementById('sales').textContent = "₹" + data.sales;
+    document.getElementById('orders').textContent = data.orders;
+
+    // Optional: Personalize greeting
+    const admin = JSON.parse(localStorage.getItem("admin"));
+    if (admin && admin.name) {
+      document.getElementById("greeting").textContent = `Hi, ${admin.name} 👋`;
+    }
+  </script>
+
+</body>
+</html>

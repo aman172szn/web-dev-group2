@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Books - Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Galdeano&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inconsolata:wdth,wght@82,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="managebook.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <h2><span class="ez">ez</span><span class="books">Books</span></h2>
+    <div class="nav-links">
+      <a href="admin_dashboard.html">Home</a>
+      <a href="admin_managebook.html">Manage Books</a>
+      <a href="admin_manageuser.html">Manage Users</a>
+    </div>
+  </div>
+
+  <div class="main">
+    <h2>Pending Book Submissions</h2>
+    <div class="book-container" id="bookContainer"></div>
+    <p id="noBooksMessage" class="no-books" style="display: none;">No book submissions available.</p>
+  </div>
+
+  <script>
+    // Example book object to test the UI
+const sampleBooks = [
+{
+  title: "Introduction to Algorithms",
+  author: "Thomas H. Cormen",
+  edition: "3rd",
+  condition: "Good",
+  mrp: 999,
+  price: 499,
+  image: "https://via.placeholder.com/150" // Replace with a real image URL if needed
+},
+{
+  title: "Clean Code",
+  author: "Robert C. Martin",
+  edition: "1st",
+  condition: "Like New",
+  mrp: 750,
+  price: 450,
+  image: "https://via.placeholder.com/150"
+}
+];
+
+    // Save to localStorage once for testing (you can remove this later)
+    if (!localStorage.getItem("bookSubmissions")) {
+      localStorage.setItem("bookSubmissions", JSON.stringify(sampleBooks));
+    }
+
+    function loadBooks() {
+      const bookContainer = document.getElementById("bookContainer");
+      const books = JSON.parse(localStorage.getItem("bookSubmissions")) || [];
+      bookContainer.innerHTML = "";
+
+      if (books.length === 0) {
+        document.getElementById("noBooksMessage").style.display = "block";
+        return;
+      }
+
+      document.getElementById("noBooksMessage").style.display = "none";
+
+      books.forEach((book, index) => {
+        const card = document.createElement("div");
+        card.className = "book-card";
+
+        card.innerHTML = `
+          <img src="${book.image}" alt="Book Cover">
+          <h3>${book.title}</h3>
+          <p><strong>Author:</strong> ${book.author}</p>
+          <p><strong>Edition:</strong> ${book.edition}</p>
+          <p><strong>Condition:</strong> ${book.condition}</p>
+          <p><strong>MRP:</strong> ₹${book.mrp.toFixed(2)}</p>
+          <p><strong>Final Price:</strong> ₹${book.price.toFixed(2)}</p>
+          <div class="btn-group">
+            <button class="approve-btn" onclick="approveBook(${index})">✔ Approve</button>
+            <button class="reject-btn" onclick="rejectBook(${index})">✖ Reject</button>
+          </div>
+        `;
+
+        bookContainer.appendChild(card);
+      });
+    }
+
+    function approveBook(index) {
+      alert("Book approved!");
+      removeBook(index);
+    }
+
+    function rejectBook(index) {
+      alert("Book rejected!");
+      removeBook(index);
+    }
+
+    function removeBook(index) {
+      let books = JSON.parse(localStorage.getItem("bookSubmissions")) || [];
+      books.splice(index, 1);
+      localStorage.setItem("bookSubmissions", JSON.stringify(books));
+      loadBooks();
+    }
+
+    window.onload = loadBooks;
+  </script>
+
+</body>
+</html>

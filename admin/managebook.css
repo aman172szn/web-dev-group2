@@ -1,0 +1,135 @@
+
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+        background-color: #121212; /* a rich dark background */
+        color: white;
+        font-family: "Galdeano", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+    .navbar {
+        background: #1e1e1e; /* Top div fully red */
+        color: white;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      
+      .navbar h2 {
+        margin-left: 20px;
+      }
+      
+      .nav-links {
+        display: flex;
+        gap: 15px;
+        margin-left: auto; /* This pushes the links to the right */
+        margin-right: 20px;
+      }
+      
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      
+      .nav-links a:hover {
+        background-color: black;
+      }
+
+    .main {
+      padding: 30px;
+      color: #d93f3f;
+    }
+
+    .main h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .book-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .book-card {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .book-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .book-card h3 {
+      margin: 5px 0;
+      color: white;
+    }
+
+    .book-card p {
+      margin: 3px 0;
+      font-size: 14px;
+      color: white;
+    }
+
+    .btn-group {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .approve-btn, .reject-btn {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .approve-btn {
+      background-color: #27ae60;
+    }
+
+    .approve-btn:hover {
+      background-color: #1e8449;
+    }
+
+    .reject-btn {
+      background-color: #e74c3c;
+    }
+
+    .reject-btn:hover {
+      background-color: #c0392b;
+    }
+
+    .no-books {
+      font-size: 18px;
+      color: #7f8c8d;
+    }
+    .ez {
+        color: #d93f3f;
+        font-weight: bold;
+      }
+      
+      .books {
+        color: black;
+        font-weight: bold;
+      }
+      
+      
