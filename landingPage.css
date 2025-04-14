@@ -52,8 +52,7 @@ body{
     font-size: 20px;
     font-size: 900;
     background-color: white;
-    /* box-shadow: inset -0px -4px 6px rgba(0, 0, 0, 0.3); */
-    box-shadow: inset -3px -3px 19px rgba(0, 0, 0, 0.5);
+    /* box-shadow: inset -3px -3px 19px rgba(0, 0, 0, 0.5); */
 }
 .navMidButton2{
     width: 100%;
@@ -68,7 +67,7 @@ body{
     font-size: 900;
     background-color:#d93f3fb0;
     color: white;
-    /* box-shadow: inset 5px -9px 19px rgba(0, 0, 0, 0.5); */
+    box-shadow: inset 5px -9px 19px rgba(0, 0, 0, 0.5);
 }
 .navright{
     /* border: 1px solid green; */
@@ -130,8 +129,8 @@ body{
     /* border: 1px solid green; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 8px;
-    margin-bottom: 8px;
+    gap: 22px;
+    margin-bottom: 22px;
 }
 .col{
     /* border: 1px solid green; */
