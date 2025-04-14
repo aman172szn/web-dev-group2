@@ -55,6 +55,7 @@
                             <input type="password" id="password" name="password" placeholder="Password">
                         </div>
                         <div class="formFields">
+                            <p id="signInError" class="error-msg" style="color: red;"></p>
                             <button type="submit" name="login">Sign In</button>
                         </div>
                         <div id="extras">
@@ -83,6 +84,7 @@
                             <input type="password" id="password" name="password" placeholder="Password">
                         </div>
                         <div class="formFields1">
+                            <p id="signUpError" class="error-msg" style="color: red;"></p>
                             <button type="submit" name="signup">Sign Up</button>
                         </div>
                     </form>
@@ -105,8 +107,26 @@
         </div>
     </div>
     
+
 </body>
 <script>
+    //show error if there is duplicate username
+    const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        if (error) {
+            // Ensure Sign Up section is visible
+            document.getElementById("signIn").style.display = "none";
+            document.getElementById("signUpMessage").style.display = "none";
+            document.getElementById("signUp").style.display = "block";
+            document.getElementById("signInMessage").style.display = "flex";
+    
+            // Show error in Sign Up section
+            document.getElementById('signUpError').textContent = decodeURIComponent(error);
+    
+            // Clean the URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+
     const signInForm = document.getElementById("signIn");
     const signUpForm = document.getElementById("signUp");
     const signInMessage = document.getElementById("signInMessage");
@@ -122,6 +142,8 @@
         signUpMessage.style.display = "none";
         signUpForm.style.display = "block";
         signInMessage.style.display = "flex";
+        signInError.textContent = ""; // clear on toggle
+        signUpError.textContent = "";
     });
 });
 
@@ -132,8 +154,12 @@ signInBtns.forEach(btn => {
         signInMessage.style.display = "none";
         signInForm.style.display = "block";
         signUpMessage.style.display = "flex";
+        signInError.textContent = ""; // clear on toggle
+        signUpError.textContent = "";
     });
 });
+
+
 
 </script>
 </html>
