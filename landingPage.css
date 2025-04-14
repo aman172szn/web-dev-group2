@@ -194,7 +194,7 @@ body{
     justify-content: center;
 }
 .sellingForm{
-    height: 500px;
+    /* height: 500px; */
     width: 500px;
     background-color: white;
 }
@@ -237,6 +237,12 @@ body{
     height: 100%;
     padding-top: 8px;
 }
+.formFields2 input{
+    border: 1px solid green;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}
 #bookcondition{
     /* margin-right: 19px; */
     padding: 8px;
@@ -258,4 +264,52 @@ body{
     font-size: 18px;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+.formFields3 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 55px;
+}
+.formFields3 label {
+    font-weight: bold;
+    padding-left: 12px;
+    font-size: 13px;
+    margin-bottom: 5px;
+    /* border: 1px solid green; */
+    height: 100%;
+    padding-top: 8px;
+}
+
+.formFields3 input[type="file"] {
+    padding: 5px 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.formFields3 input[type="file"]:hover {
+    border-color: #007BFF;
+}
+.formFields4{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 55px;
+}
+.formFields4 label {
+    font-weight: bold;
+    padding-left: 12px;
+    font-size: 13px;
+    margin-bottom: 5px;
+    /* border: 1px solid green; */
+    height: 100%;
+    padding-top: 8px;
+}
+.formFields4 textarea{
+    height: 4rem;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    background: #e4e4e3;
 }
