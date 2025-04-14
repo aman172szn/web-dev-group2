@@ -66,6 +66,7 @@ $recentActivity = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         <a href="admin_dashboard.php" class="active">Home</a>
         <a href="admin_managebook.php">Manage Books</a>
         <a href="admin_manageuser.php">Manage Users</a>
+        <a href="orders.php">Orders</a>
         <a href="logout.php" class="logout-btn">Logout</a>
       </div>
     </div>

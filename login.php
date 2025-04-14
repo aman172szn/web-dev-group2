@@ -37,7 +37,7 @@ if(isset($_POST['login'])) {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['is_admin'] = false;
-                header("Location: user_dashboard.php"); // bac to dashboard
+                header("Location: user/landingPage.php"); // bac to dashboard
                 exit();
             }
         }

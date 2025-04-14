@@ -66,6 +66,7 @@ $pendingBooks = $result->fetch_all(MYSQLI_ASSOC);
             <a href="admin_dashboard.php">Home</a>
             <a href="admin_managebook.php" class="active">Manage Books</a>
             <a href="admin_manageuser.php">Manage Users</a>
+            <a href="orders.php">Orders</a>
             <a href="logout.php" class="logout-btn">Logout</a>
         </div>
     </div>
@@ -95,7 +96,7 @@ $pendingBooks = $result->fetch_all(MYSQLI_ASSOC);
             <?php if(count($pendingBooks) > 0): ?>
                 <?php foreach($pendingBooks as $book): ?>
                     <div class="book-card">
-                        <img src="../<?php echo htmlspecialchars($book['image_path']); ?>" alt="Book Cover" onerror="this.src='../assets/images/default-book.jpg'"/>
+                        <img src="<?php echo htmlspecialchars($book['image_path']); ?>" alt="Book Cover" />
                         <h3><?php echo htmlspecialchars($book['title']); ?></h3>
                         <p><strong>Author:</strong> <?php echo htmlspecialchars($book['author']); ?></p>
                         <p><strong>Edition:</strong> <?php echo htmlspecialchars($book['edition']); ?></p>
