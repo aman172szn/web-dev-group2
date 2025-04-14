@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    font-family: "Galdeano", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    /* height: 100%;
+    width: 100%; */
+    background: linear-gradient(rgba(0, 0, 0, 0.737), rgba(0, 0, 0, 0.737)),url(./media/background.jpeg);
+}
+.container{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+.navbar{
+    margin: 0px;
+    /* padding: 20px; */
+    /* background-color: #d93f3f57; */
+    color: white;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+}
+.navleft{
+    /* border: 1px solid green; */
+    padding: 20px;
+    font-size: 20px;
+}
+.navleft span{
+    color: #d93f3f;
+}
+.navmid{
+    /* border: 1px solid green; */
+    padding: 40px 70px 0px 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+}
+.navMidButton1{
+    width: 100%;
+    /* border: 1px solid green; */
+}
+.navMidButton1 button{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 0px 0px 0px;
+    border: none;
+    font-size: 20px;
+    font-size: 900;
+    background-color: white;
+    /* box-shadow: inset -3px -3px 19px rgba(0, 0, 0, 0.5); */
+}
+.navMidButton2{
+    width: 100%;
+    /* border: 1px solid green; */
+}
+.navMidButton2 button{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 15px 0px 0px;
+    border: none;
+    font-size: 20px;
+    font-size: 900;
+    background-color:#d93f3fb0;
+    color: white;
+    box-shadow: inset 5px -9px 19px rgba(0, 0, 0, 0.5);
+}
+.navright{
+    /* border: 1px solid green; */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+}
+.navSearch{
+    /* border: 1px solid green; */
+    box-sizing: border-box;
+    padding: 3px 5px;
+}
+.navSearch input{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 0px 0px 0px 10px;
+    box-sizing: border-box;
+    border: none;
+}
+.navbarSocial{
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.navMidButton3{
+    /* border: 1px solid green; */
+    padding: 5px 5px;
+}
+.navMidButton3 button{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border:none;
+    background-color: #d93f3f;
+    color: white;
+    font-weight: 900;
+    font-size: 15px;
+}
+.bookDetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid green;
+    width: 100%;
+    padding: 0px 50px;
+}
+.detailsBox{
+    padding: 20px 400px;
+}
+.bookTitle{
+    /* border: 1px solid green; */
+    height: 3rem;
+    background-color: #d93f3fb0;
+    font-size: 30px;
+    text-align: left;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    font-weight: 900;
+    padding-left: 20px;
+}
+.bookRemainingDetails{
+    padding: 50px;
+    border: 1px solid green;
+    background-color: white;
+    /* height:100%; */
+}
+.DetailsUpperBody{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height:100%;
+    gap: 10px;
+}
+.bookDetailsimage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 1px solid green;
+    height: 300px;
+    background: #bbbbbb9c;
+    border-radius: 20px;
+}
+.bookDetailsimage img{
+    height: 100%;
+    border-radius: 20px;
+}
+.bookDescription{
+    padding: 30px;
+    border: 1px solid green;
+    background: #bbbbbb9c;
+    border-radius: 20px;
+}
+/* .DetailsLowerBody{ */
+    /* background-color: #bbbbbb9c; */
+    /* padding: 10px; */
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; */
+/* } */
+.DetailsLowerBody div{
+    margin-top: 10px;
+    background: #bbbbbb9c;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid green;
+}
+.priceDetails{
+    margin-top: 10px;
+    /* padding-left: 5px; */
+}
+.priceDetails h4{
+    margin-left: 10px;
+}
+.priceDetails button{
+    margin-top: 5px;
+    height: 38px;
+    border: none;
+    border-radius: 30px;
+    background-color: #d93f3f;
+    width: 100%;
+}
