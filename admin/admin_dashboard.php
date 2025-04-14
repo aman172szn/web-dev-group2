@@ -71,7 +71,7 @@ $recentActivity = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     </div>
 
     <div class="main">
-      <h1 id="greeting">Welcome, <?php echo htmlspecialchars($_SESSION['admin_username'] ?? 'Admin'); ?> 👋</h1>
+      <h1 id="greeting">Welcome, <?php echo htmlspecialchars($_SESSION['admin_username'] ?? 'Admin'); ?> </h1>
       
       <div class="cards">
         <div class="card">
