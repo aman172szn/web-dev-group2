@@ -1,135 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
+body {
+  background-color: #121212; /*  dark bg */
+  color: white;
+  font-family: "Galdeano", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-    body {
-        background-color: #121212; /* a rich dark background */
-        color: white;
-        font-family: "Galdeano", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
+.navbar {
+  background: #1e1e1e; /* Top div fully red */
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-    .navbar {
-        background: #1e1e1e; /* Top div fully red */
-        color: white;
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-      
-      .navbar h2 {
-        margin-left: 20px;
-      }
-      
-      .nav-links {
-        display: flex;
-        gap: 15px;
-        margin-left: auto; /* This pushes the links to the right */
-        margin-right: 20px;
-      }
-      
-      .nav-links a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        font-weight: bold;
-      }
-      
-      .nav-links a:hover {
-        background-color: black;
-      }
+.navbar h2 {
+  margin-left: 20px;
+}
 
-    .main {
-      padding: 30px;
-      color: #d93f3f;
-    }
+.nav-links {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+  margin-right: 20px;
+}
 
-    .main h2 {
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
 
-    .book-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+.nav-links a:hover {
+  background-color: black;
+}
 
-    .book-card {
-      background: #1e1e1e;
-      padding: 20px;
-      border-radius: 10px;
-      width: 300px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+.nav-links a.active {
+  background-color: #d93f3f;
+  color: white;
+}
 
-    .book-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      margin-bottom: 10px;
-      color: white;
-    }
+.nav-links .logout-btn {
+  background-color: transparent;
+  border: 2px solid #d93f3f;
+  color: #d93f3f;
+}
 
-    .book-card h3 {
-      margin: 5px 0;
-      color: white;
-    }
+.nav-links .logout-btn:hover {
+  background-color: #d93f3f;
+  color: white;
+}
 
-    .book-card p {
-      margin: 3px 0;
-      font-size: 14px;
-      color: white;
-    }
+.main {
+  padding: 30px;
+}
 
-    .btn-group {
-      margin-top: 15px;
-      display: flex;
-      gap: 10px;
-    }
+.main h2 {
+  color: #d93f3f;
+  margin-bottom: 30px;
+}
 
-    .approve-btn, .reject-btn {
-      flex: 1;
-      padding: 8px;
-      border: none;
-      border-radius: 5px;
-      color: white;
-      cursor: pointer;
-    }
+.success-message,
+.error-message {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
 
-    .approve-btn {
-      background-color: #27ae60;
-    }
+.success-message {
+  background-color: #28a74533;
+  color: #28a745;
+  border: 1px solid #28a745;
+}
 
-    .approve-btn:hover {
-      background-color: #1e8449;
-    }
+.error-message {
+  background-color: #d93f3f33;
+  color: #d93f3f;
+  border: 1px solid #d93f3f;
+}
 
-    .reject-btn {
-      background-color: #e74c3c;
-    }
+.book-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
 
-    .reject-btn:hover {
-      background-color: #c0392b;
-    }
+.book-card {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s;
+}
 
-    .no-books {
-      font-size: 18px;
-      color: #7f8c8d;
-    }
-    .ez {
-        color: #d93f3f;
-        font-weight: bold;
-      }
-      
-      .books {
-        color: black;
-        font-weight: bold;
-      }
-      
-      
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.book-card h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  color: #999;
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.book-card p strong {
+  color: #d93f3f;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.approve-btn,
+.reject-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.approve-btn {
+  background-color: transparent;
+  border: 2px solid #28a745;
+  color: #28a745;
+}
+
+.approve-btn:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+.reject-btn {
+  background-color: transparent;
+  border: 2px solid #d93f3f;
+  color: #d93f3f;
+}
+
+.reject-btn:hover {
+  background-color: #d93f3f;
+  color: white;
+}
+
+.no-books {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  grid-column: 1 / -1;
+  padding: 40px;
+}
+
+.ez {
+  color: #d93f3f;
+  font-weight: bold;
+}
+
+.books {
+  color: black;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .book-container {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    padding: 15px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .book-card img {
+    height: 150px;
+  }
+}
