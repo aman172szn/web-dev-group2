@@ -142,7 +142,7 @@ $conn->close();
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
-            transition: border-color 0.3s ease;
+            transition: all 0.2s ease;
         }
 
         .form-group input[type="file"] {
@@ -150,6 +150,13 @@ $conn->close();
             border: 1px dashed #ddd;
             border-radius: 5px;
             width: 100%;
+            transition: all 0.2s ease;
+        }
+
+        .form-group input:hover,
+        .form-group select:hover,
+        .form-group textarea:hover {
+            border-color: #4CAF50;
         }
 
         .form-group input:focus,
@@ -168,12 +175,17 @@ $conn->close();
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
+            width: 100%;
         }
 
         .submit-btn:hover {
             background-color: #45a049;
-            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .submit-btn:active {
+            transform: translateY(1px);
         }
 
         .error-container {
@@ -182,6 +194,7 @@ $conn->close();
             padding: 1rem;
             margin-bottom: 1.5rem;
             border-radius: 4px;
+            transition: all 0.2s ease;
         }
 
         .error-container ul {
@@ -197,6 +210,7 @@ $conn->close();
             margin-bottom: 1.5rem;
             border-radius: 4px;
             color: #2e7d32;
+            transition: all 0.2s ease;
         }
     </style>
 </head>
